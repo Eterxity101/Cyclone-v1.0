@@ -5,3 +5,47 @@ Anyways this hub will recieve massive updates every once in a while when I have 
 ]]
 
 --Code
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local Background = Instance.new("ImageLabel")
+local Launch = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+main.Position = UDim2.new(0.10403727, 0, 0.0732177272, 0)
+main.Size = UDim2.new(0, 500, 0, 365)
+main.Active = true
+main.Draggable = true
+
+Background.Name = "Background"
+Background.Parent = main
+Background.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Background.Size = UDim2.new(0, 500, 0, 365)
+Background.Image = "http://www.roblox.com/asset/?id=6346301649"
+
+Launch.Name = "Launch"
+Launch.Parent = main
+Launch.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Launch.BorderColor3 = Color3.fromRGB(0, 0, 127)
+Launch.BorderSizePixel = 3
+Launch.Position = UDim2.new(0.400000006, 0, 0.0410958901, 0)
+Launch.Size = UDim2.new(0, 100, 0, 50)
+Launch.Font = Enum.Font.SourceSansSemibold
+Launch.Text = "Launch"
+Launch.TextColor3 = Color3.fromRGB(255, 255, 255)
+Launch.TextScaled = true
+Launch.TextSize = 14.000
+Launch.TextWrapped = true
+Launch.MouseButton1Down:connect(function()
+	main.Visible = false
+end)
