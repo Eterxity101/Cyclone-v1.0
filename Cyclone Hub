@@ -48,4 +48,5 @@ Launch.TextSize = 14.000
 Launch.TextWrapped = true
 Launch.MouseButton1Down:connect(function()
 	main.Visible = false
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Eterxity101/Cyclone-v1.0/main/Actual%20Cyclone%20Hub')()
 end)
